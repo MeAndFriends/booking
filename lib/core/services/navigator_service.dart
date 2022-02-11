@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class NavigatorService extends BaseService {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-  Future<T> navigateToPage<T>(MaterialPageRoute<T> pageRoute) async {
+  Future<T> navigateToPage<T>(Route<T> pageRoute) async {
     log.i('navigateToPage: pageRoute: ${pageRoute.settings.name}');
     if (navigatorKey.currentState == null) {
       log.e('navigateToPage: Navigator State is null');
@@ -13,8 +13,7 @@ class NavigatorService extends BaseService {
     return navigatorKey.currentState.push(pageRoute);
   }
 
-  Future<T> navigateToPageWithReplacement<T>(
-      MaterialPageRoute<T> pageRoute) async {
+  Future<T> navigateToPageWithReplacement<T>(Route<T> pageRoute) async {
     log.i('navigateToPageWithReplacement: '
         'pageRoute: ${pageRoute.settings.name}');
     if (navigatorKey.currentState == null) {

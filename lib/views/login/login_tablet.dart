@@ -35,7 +35,7 @@ class _LoginTablet extends StatelessWidget {
               top: 0,
               right: 0,
               child: ClipPath(
-                clipper: LoginShapeClipper(),
+                clipper: LoginShapeClipper(turningRadius: 0.6),
                 child: Container(
                   height: heightOfScreen,
                   decoration: const BoxDecoration(

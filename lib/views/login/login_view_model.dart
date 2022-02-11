@@ -1,4 +1,5 @@
 import 'package:booking/core/base/base_view_model.dart';
+import 'package:booking/widgets/animations/slide_right_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/services/navigator_service.dart';
@@ -23,9 +24,8 @@ class LoginViewModel extends BaseViewModel {
   }
 
   void login() {
-    navigatorService.navigateToPage(MaterialPageRoute<HotelListView>(
-      builder: (context) => const HotelListView(),
-    ));
+    navigatorService
+        .navigateToPage(SlideRightRoute(page: const HotelListView()));
   }
   // Add ViewModel specific code here
 }
