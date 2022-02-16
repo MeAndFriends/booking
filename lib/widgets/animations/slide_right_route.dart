@@ -18,7 +18,7 @@ class SlideRightRoute extends PageRouteBuilder {
           ) =>
               SlideTransition(
             position: Tween<Offset>(
-              begin: const Offset(0, 0.7),
+              begin: const Offset(0, 0.6),
               end: const Offset(0, 0),
             ).animate(animation),
             child: child,
