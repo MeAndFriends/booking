@@ -153,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
             screenCubit.login(context);
           },
         ),
-        const SizedBox(height: 20.0),
+        const SizedBox(height: 15.0),
       ],
     );
   }
